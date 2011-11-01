@@ -1,0 +1,15 @@
+import oauth2 as oauth
+
+class Conector:
+    def __init__(self):
+        self.consumer = oauth.Consumer(
+            'PUBLIC',
+            'PRIVATE'
+            )
+        self.access_token = oauth.Token(
+            'PUBLIC',
+            'PRIVATE'
+            )
+
+    def getConexion(self):
+        return oauth.Client(self.consumer, self.access_token)
